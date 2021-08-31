@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cfs THPT Đắk Song</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./aqdt.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    * {
+        font-family: 'Dancing Script', cursive;
+        font-weight: bolder;
+    }
+    
+    .box {
+        position: absolute;
+        top: 40%;
+        left: 35%
+    }
+    
+    .backgound {
+        padding-top: 5em;
+        padding-left: 1em;
+        background: rgb(131, 58, 180);
+        background: linear-gradient(191deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 64%, rgba(252, 176, 69, 1) 100%);
+        height: 100vh;
+    }
+    
+    .content {
+        display: flex;
+        color: white;
+        font-size: 3em;
+        font-weight: bolder;
+        margin: auto;
+        justify-content: center;
+    }
+    
+    .totalbtn {
+        display: flex;
+        margin-top: 2em;
+        justify-content: center;
+    }
+    
+    .move {
+        transform: translate(10%, 200%);
+        transition: 0.01s;
+    }
+</style>
+
+<body>
+    <div class="container-fuild backgound">
+        <div class="row">
+            <div class="col">
+                <h1 class="content ">
+                    Đồng ý làm người yêu mình nhé 💖!!
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col totalbtn">
+                <button id="love" class="btn btn-success btn-lg" onclick="clickOkie()">Đồng ý 💖 </button>
+                <button id="no-love" class=" btn btn-danger btn-lg" onclick="lovefunction()">Không 💔</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var love = document.getElementById("love");
+        var no_love = document.getElementById("no-love");
+
+        love.addEventListener("click", myFunction);
+
+        function clickOkie() {
+            alert('Mình biết cậu sẽ đồng ý mà, Mãi yêu 💖 ')
+        }
+
+
+
+        function lovefunction() {
+            no_love.classList.toggle('move')
+        }
+    </script>
+</body>
+
+</html>
